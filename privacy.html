@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthConnector — Privacy Policy</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #ffffff;
+      --accent: #0b5394;
+      --rule: #e5e5e5;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 32px 0 8px;
+      letter-spacing: -0.005em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    p, li { font-size: 15px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: #f4f4f4;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13.5px;
+    }
+    a { color: var(--accent); }
+    .nav {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      font-size: 14px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy — HealthConnector</h1>
+      <p class="meta">Last updated: 25 April 2026 · Version 1.0</p>
+    </header>
+
+    <h2>1. About this document</h2>
+    <p>
+      This Privacy Policy describes how <strong>HealthConnector</strong> processes personal data.
+      HealthConnector is a non-commercial Bachelor thesis project at
+      <strong>Hochschule RheinMain</strong>, Germany. The application is being designed and developed
+      by a single student for that student's own personal use only. There are no other users.
+    </p>
+
+    <h2>2. What HealthConnector is</h2>
+    <p>
+      HealthConnector is a planned web application that will run entirely on the developer's own
+      personal computer in Docker containers (a .NET backend, a PostgreSQL database, a Vue 3
+      frontend and Grafana for visualisation). Its purpose is to read the developer's own personal
+      fitness and health data from third-party providers (currently the Huawei Health Service Kit
+      and the Google Health API) and to keep a private local copy of that data on the developer's
+      own computer.
+    </p>
+
+    <h2>3. Controller</h2>
+    <p>
+      The controller in the sense of Art. 4(7) GDPR is the developer of HealthConnector.
+      For any privacy-related question please contact:
+    </p>
+    <ul>
+      <li>Email: <a href="mailto:marvin.fischer.inbox@proton.me">marvin.fischer.inbox@proton.me</a></li>
+    </ul>
+
+    <h2>4. Data processed</h2>
+    <p>
+      HealthConnector only processes data that belongs to the developer themselves. Specifically,
+      the application reads the following categories of data through the official APIs of the
+      respective providers, after the developer has explicitly granted access via OAuth 2.0:
+    </p>
+    <ul>
+      <li>Activity data (e.g. steps, distance, calories, active minutes)</li>
+      <li>Cardiovascular and vital-sign data (e.g. heart rate, blood pressure, SpO2, body temperature)</li>
+      <li>Body-composition and wellbeing data (e.g. body fat, sleep, stress level)</li>
+      <li>Profile attributes needed for correct calculations (height, weight, gender, date of birth)</li>
+      <li>Device metadata (device name, model, serial number) used to label records with their source device</li>
+    </ul>
+    <p>
+      No data of any other person is processed. HealthConnector does not collect data from end users
+      because there are no end users other than the developer.
+    </p>
+
+    <h2>5. Purposes of processing</h2>
+    <ul>
+      <li>Personal long-term self-tracking on the developer's own computer.</li>
+      <li>Academic research: the data forms the evaluation dataset of the developer's Bachelor thesis on multi-vendor personal health-data aggregation.</li>
+    </ul>
+    <p>
+      The data will not be used for medical diagnosis, medical treatment, medical advice, profiling,
+      automated decision-making, advertising, or any commercial purpose.
+    </p>
+
+    <h2>6. Legal basis</h2>
+    <p>
+      The legal basis for processing the developer's own data is Art. 6(1)(a) GDPR (consent given
+      by the data subject — who is the developer themselves) and, where applicable, Art. 9(2)(a)
+      GDPR for the explicit consent to process health data.
+    </p>
+
+    <h2>7. Storage and security</h2>
+    <ul>
+      <li>All data is stored exclusively in a local PostgreSQL database running in a Docker container on the developer's own personal computer.</li>
+      <li>No data is uploaded to any cloud, hosted database, or external server operated by HealthConnector.</li>
+      <li>OAuth access tokens are stored encrypted and only locally; they are used solely to authenticate read requests against the provider APIs.</li>
+      <li>The developer's computer is protected by full-disk encryption and an OS-level user account password.</li>
+    </ul>
+
+    <h2>8. Sharing with third parties</h2>
+    <p>
+      <strong>HealthConnector does not share any data with any third party.</strong>
+      The only outbound network traffic is the read-only API calls to the provider endpoints
+      (Huawei Health Service Kit, Google Health API) needed to fetch the developer's own data.
+    </p>
+
+    <h2>9. Retention</h2>
+    <p>
+      Data is retained for as long as it is useful for the developer's personal records and the
+      Bachelor thesis. The developer can delete the local PostgreSQL database (or any subset of
+      it) at any time, which removes the data permanently.
+    </p>
+
+    <h2>10. Provider privacy policies</h2>
+    <p>
+      When data is read from a provider, that provider's own privacy policy applies in addition
+      to this document:
+    </p>
+    <ul>
+      <li>Huawei: <a href="https://consumer.huawei.com/en/privacy/privacy-policy/" target="_blank" rel="noopener">https://consumer.huawei.com/en/privacy/privacy-policy/</a></li>
+      <li>Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+    </ul>
+
+    <h2>11. Rights of the data subject</h2>
+    <p>
+      Because the only data subject is the developer themselves, the GDPR rights (access,
+      rectification, erasure, restriction, portability, objection — Art. 15–21 GDPR) are exercised
+      by the developer directly through full local control over the database. Authorisations
+      granted to HealthConnector against the provider APIs can be revoked at any time in the
+      respective provider's account settings (Huawei ID privacy centre / Google Account
+      permissions).
+    </p>
+
+    <h2>12. Changes</h2>
+    <p>
+      This Privacy Policy may be updated as the project evolves. The current version, including
+      its date, is always available at the URL of this page.
+    </p>
+
+    <p class="nav">
+      <a href="./index.html">← Back to overview</a> ·
+      <a href="./terms.html">Terms of Use</a>
+    </p>
+  </main>
+</body>
+</html>

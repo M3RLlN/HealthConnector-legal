@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthConnector — Legal</title>
+  <style>
+    :root {
+      --fg: #1a1a1a;
+      --muted: #555;
+      --bg: #ffffff;
+      --accent: #0b5394;
+      --rule: #e5e5e5;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 32px;
+    }
+    p { font-size: 15px; }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 32px 0;
+    }
+    @media (max-width: 540px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      display: block;
+      padding: 20px 22px;
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .card-title { font-weight: 600; font-size: 16px; margin-bottom: 4px; color: var(--accent); }
+    .card-desc { font-size: 14px; color: var(--muted); }
+    .footer { margin-top: 56px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; }
+    .footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>HealthConnector</h1>
+    <p class="tagline">Legal documents · Bachelor thesis project · Hochschule RheinMain</p>
+
+    <p>
+      HealthConnector is a non-commercial Bachelor thesis project. It is a small, single-user
+      web application that aggregates the developer's own personal fitness and health data
+      from multiple wearables (currently Huawei devices via the Health Service Kit and a
+      Pixel Watch via the Google Health API) into a private local database, for self-tracking
+      and academic research.
+    </p>
+
+    <p>
+      This site only hosts the legal documents required by the third-party providers from
+      whom data is read. The application itself is not published here.
+    </p>
+
+    <div class="cards">
+      <a class="card" href="./privacy.html">
+        <div class="card-title">Privacy Policy →</div>
+        <div class="card-desc">How HealthConnector handles personal data.</div>
+      </a>
+      <a class="card" href="./terms.html">
+        <div class="card-title">Terms of Use →</div>
+        <div class="card-desc">Conditions for using the application.</div>
+      </a>
+    </div>
+
+    <p class="footer">
+      Contact: <a href="mailto:marvin.fischer.inbox@proton.me">marvin.fischer.inbox@proton.me</a>
+      &nbsp;·&nbsp;
+      Repository: <a href="https://github.com/M3RLlN/HealthConnector-legal">github.com/M3RLlN/HealthConnector-legal</a>
+    </p>
+  </main>
+</body>
+</html>
